@@ -1,4 +1,5 @@
 //Conhecendo o FileSystem (fs) do node
+import {dateTime} from './module.js'
 import fs from 'fs'
 
 
@@ -10,4 +11,13 @@ const sistem = fs.readFile('response.txt','utf8', (err, data) => {
     }
 })
 
-console.log(sistem)
+const trocaDeTexto = fs.writeFile('response.txt', 'trocando texto de arquivo .txt', (err)=> {
+    if (err) throw err
+    console.log('texto trocado')
+})
+
+console.log(trocaDeTexto)
+
+console.log(sistem + dateTime)
+
+
