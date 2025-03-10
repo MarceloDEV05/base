@@ -47,3 +47,13 @@ const removeFile = fs.unlink('testFile.html', (err)=>{
 })
 
 console.log(removeFile) //arquivo 'testFile.html deletado com sucesso'
+
+
+// criando arquivo e importando modulo com fs
+const createFile = fs.appendFile('nodeEvent.js', `import event from 'event'`, (ERR) =>{
+ if (ERR) throw ERR
+
+ console.log('arquivo criado com modulo')
+} )
+
+console.log(createFile)
