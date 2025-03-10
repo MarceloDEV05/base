@@ -1,5 +1,5 @@
 //Conhecendo o FileSystem (fs) do node
-import dateTime from './module.js'
+import dateTime from '../modulos/module.js'
 import fs from 'fs'
 
 dateTime
