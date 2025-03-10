@@ -10,7 +10,8 @@ eventEmissor.on('event', ()=> {
 console.log('evento disparadoo...')
 }) 
 
-//aqui estou emitindo a palavra 'event' e ira disparar um evento
+//aqui estou emitindo a palavra 'event' e ira chamar a função que ira disparar o evento
+//no caso vai escrever no console 'evento disparadoo...'
 eventEmissor.emit('event')
 
 
