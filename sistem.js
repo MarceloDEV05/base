@@ -1,5 +1,5 @@
 //Conhecendo o FileSystem (fs) do node
-import {dateTime} from './module.js'
+import dateTime from './module.js'
 import fs from 'fs'
 
 
@@ -16,8 +16,20 @@ const trocaDeTexto = fs.writeFile('response.txt', 'trocando texto de arquivo .tx
     console.log('texto trocado')
 })
 
+const addFile = fs.appendFile('newFile.txt', 'hello world', (err)=>{
+    if (err) throw err
+
+    console.log('saved')
+})
 console.log(trocaDeTexto)
 
 console.log(sistem + dateTime)
 
 
+const addNewFile = fs.appendFile('testFile.html', 'OLÁ', (err) => {
+    if (err) throw err
+
+    console.log('arquivo criado com sucesso')
+})
+
+console.log(addFile, addNewFile)
